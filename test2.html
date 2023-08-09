@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Registration</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <style>
+        .radio-container {
+            /* display: inline-block; */
+            margin-right: 10px;
+        }
+
+        .radio-button {
+            display: none;
+        }
+
+        .radio-label {
+            /* display: inline-block; */
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 10px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .radio-label:hover {
+            /* border-color: #555; */
+        }
+
+        .radio-button:checked+.radio-label {
+            border-color: #007bff;
+        }
+
+        .radio-icon {
+            margin-left: 10px;
+        }
+
+        .fas{
+            font-size: 1.5rem;
+            color: #555555d0;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="progress-container">
+            <div class="progress-bar"></div>
+            <div class="progress-text">0%</div>
+        </div>
+
+        <div class="form-step active">
+            <h2>Let's start building your Profile!</h2>
+            <p>We will help you find the right job oppurtunities based on the details you enter here</p>
+            <form>
+                <div class="radio-container">
+                    <input type="radio" name="user-type" id="student" class="radio-button">
+                    <label for="student" class="radio-label">
+                        I am student
+                        <i class="fas fa-user-graduate radio-icon"></i>
+                    </label>
+                </div>
+
+                <div class="radio-container">
+                    <input type="radio" name="user-type" id="professional" class="radio-button">
+                    <label for="professional" class="radio-label">
+                        I am working professional
+                        <i class="fas fa-briefcase radio-icon"></i>
+                    </label>
+                </div>
+
+                <label for="name">Name:</label>
+                <input type="text" id="name" oninput="updateProgressBar()">
+                <label for="address">Enter your city</label>
+                <input type="text" id="address" oninput="updateProgressBar()">
+                <div class="div">
+                    <button type="button" class="next-btn" onclick="nextStep()">Next</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-step">
+            <h2>Step 2: Contact Information</h2>
+            <form>
+                <label for="email">Email:</label>
+                <input type="email" id="email" oninput="updateProgressBar()">
+                <button type="button" class="next-btn" onclick="nextStep()">Next</button>
+            </form>
+        </div>
+
+        <div class="form-step">
+            <h2>Step 3: Employment Details</h2>
+            <form>
+                <label for="position">Position:</label>
+                <input type="text" id="position" oninput="updateProgressBar()">
+                <button type="button" class="next-btn" onclick="nextStep()">Next</button>
+            </form>
+        </div>
+
+        <div class="form-step">
+            <h2>Step 4: Review and Submit</h2>
+
+            <form>
+                <label for="position">Position:</label>
+                <input type="text" id="position" oninput="updateProgressBar()">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Registration</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <style>
+        
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="progress-container">
+            <div class="progress-bar"></div>
+            <div class="progress-text">0%</div>
+        </div>
+
+        <div class="form-step active">
+            <h2>Let's start building your Profile!</h2>
+            <p>We will help you find the right job oppurtunities based on the details you enter here</p>
+            <form>
+                <div class="radio-container">
+                    <input type="radio" name="user-type" id="student" class="radio-button"
+                        onclick="updateProgressBar()">
+                    <label for="student" class="radio-label">
+                        I am student / Have never worked
+                        <i class="fas fa-user-graduate radio-icon"></i>
+                    </label>
+                </div>
+
+                <div class="radio-container">
+                    <input type="radio" name="user-type" id="professional" class="radio-button"
+                        onclick="updateProgressBar()">
+                    <label for="professional" class="radio-label">
+                        I am working professional / Have worked before
+                        <i class="fas fa-briefcase radio-icon"></i>
+                    </label>
+                </div>
+
+                <label for="name">Name:</label>
+                <input type="text" id="name" oninput="updateProgressBar()">
+                <label for="address">Enter your city</label>
+                <input type="text" id="address" oninput="updateProgressBar()">
+                <div class="div">
+                    <button type="button" class="next-btn" onclick="nextStep()">Next</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-step">
+            <h2>Education Details</h2>
+            <p>Recruiters select profiles based on educational qualification. Add yours to get noticed.</p>
+            <form>
+                <label for="select">Highest Qualification</label>
+                <select name="select">
+                    <option></option>
+                    <option>10'th</option>
+                    <option>12'th</option>
+                    <option value="">Diploma</option>
+                    <option>Graduate</option>
+                    <option>Post Graduate</option>
+                    <option>PHD</option>
+                </select>
+
+                <label for="course">Course</label>
+                <input type="text" id="course" oninput="updateProgressBar()" placeholder="B-tech or BE">
+
+                <label for="specialisation">Specialisation</label>
+                <input type="text" name="specialisation" id="" oninput="updateProgressBar()" placeholder="Computer Scienc">
+                
+                <label for="course-type">Course Type</label>
+                <input type="text" name="course-type" id="" oninput="updateProgressBar()" placeholder="Part-time or Full-time">
+
+                <label for="university">University Name</label>
+                <input type="text" name="university" id="" oninput="updateProgressBar()">
+
+                <label for="start">Starting Year</label>
+                <input type="number" name="start" id="" oninput="updateProgressBar()">
+
+                <label for="end">Passing Year</label>
+                <input type="number" name="end" id="" oninput="updateProgressBar()">
+                
+                <button type="button" class="next-btn" onclick="nextStep()">Next</button>
+            </form>
+        </div>
+
+        <div class="form-step">
+            <h2>Your work preferences</h2>
+            <p>Help us match you to the best career oppurtunities based on your preferences</p>
+            <form>
+                <label for="position">Preferred Location</label>
+                <input type="text" id="position" oninput="updateProgressBar()">
+                <select name="position" id="">
+                    <option value="">Mumbai</option>
+                    <option value="">Delhi</option>
+                </select>
+                
+                <button type="button" class="next-btn" onclick="nextStep()">Next</button>
+            </form>
+        </div>
+
+        <div class="form-step">
+            <h2>Step 4: Review and Submit</h2>
+
+            <form>
+                <label for="position">Position:</label>
+                <input type="text" id="position" oninput="updateProgressBar()">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

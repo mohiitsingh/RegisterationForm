@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .radio-container {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .radio-button {
+            display: none;
+        }
+
+        .radio-label {
+            display: inline-block;
+            padding: 10px 20px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .radio-label:hover {
+            border-color: #555;
+        }
+
+        .radio-button:checked+.radio-label {
+            border-color: #007bff;
+        }
+
+        .radio-icon {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="radio-container">
+        <input type="radio" name="user-type" id="student" class="radio-button">
+        <label for="student" class="radio-label">
+            I am student
+            <i class="fas fa-user-graduate radio-icon"></i>
+        </label>
+    </div>
+
+    <div class="radio-container">
+        <input type="radio" name="user-type" id="professional" class="radio-button">
+        <label for="professional" class="radio-label">
+            I am working professional
+            <i class="fas fa-briefcase radio-icon"></i>
+        </label>
+    </div>
+
+    <!-- Add the Font Awesome CDN link to the <head> section of your HTML -->
+
+</body>
+
+</html>
